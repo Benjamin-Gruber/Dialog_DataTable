@@ -1,12 +1,33 @@
 <template>
   <div>
-    <p class="text-h3 text-center mt-4"><v-icon class="text-h3 red--text">mdi-heart</v-icon> Willkommen! <v-icon class="text-h3 red--text">mdi-heart</v-icon></p>
+    <v-data-table :headers="headers" :items="books" :items-per-page="10" class="elevation-1"></v-data-table>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'Home',
+
+  props: {
+    books: {
+      type: Array,
+    },
+  },
+
+  data() {
+    return {
+      headers: [
+        {
+          text: 'Title',
+          value: 'title',
+        },
+        { text: 'Image', value: 'imageLink' },
+        { text: 'Country', value: 'country' },
+        { text: 'Language', value: 'language' },
+        { text: 'Actions', value: 'actions' },
+      ],
+      
+    };
+  },
 };
 </script>
