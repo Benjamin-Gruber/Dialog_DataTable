@@ -6,8 +6,8 @@
       <img src="../assets/books.png" width="50px" alt="Books" />
 
       <v-spacer></v-spacer>
-      <v-btn class="mr-3 deep-orange accent-2 white--text">Home</v-btn>
-      <v-btn class="teal lighten-2 white--text">About</v-btn>
+      <v-btn to="/" active-class=" deep-orange accent-2" class="mr-3 teal lighten-2 white--text">Home</v-btn>
+      <v-btn to="/about" active-class="deep-orange accent-2" class=" mr-3 teal lighten-2 white--text">About</v-btn>
     </v-app-bar>
   </div>
 </template>
